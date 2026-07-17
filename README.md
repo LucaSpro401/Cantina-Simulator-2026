@@ -13,4 +13,3 @@
 		PASO 3: Esperar a que Gradle termine de sincronizar todas las librerías.,
 		PASO 4: Buscar la clase Lwjgl3Launcher dentro de lwjgl3/src/main/java/ y darle al botón de Run (Play).
 
-(Nota: Cambiá donde dice "Tu Nombre Completo" por tus datos, y poné tu usuario de GitHub en el link de la Wiki).
