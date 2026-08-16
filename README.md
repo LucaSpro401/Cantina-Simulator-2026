@@ -45,7 +45,5 @@ Cantina Simulator 2026 es un juego 2D de gestión y simulación social donde adm
 5. Ejecutar el siguiente comando: 
 
 - ```bash 
-
-git clone [https://github.com/LucaSpro401/Cantina-Simulator-2026.git](https://github.com/ LucaSpro401/Cantina-Simulator-2026.git) 
-
+git clone https://github.com/LucaSpro401/Cantina-Simulator-2026.git
 
