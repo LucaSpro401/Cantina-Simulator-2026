@@ -1,4 +1,4 @@
-package io.github.some_example_name;
+package com.cantinasimulator;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.graphics.Texture;
