@@ -11,8 +11,8 @@
 
 ## [0.1.1] - 2026-08-24
 ### Agregado
--Packages db, entidades, principal y utilidades.
--Clase Main inicializada.
--Clase Jugador inicializada.
--Clase Entrada inicializada.
--Base de datos inicializada en intellij
+- Packages db, entidades, principal y utilidades.
+- Clase Main inicializada.
+- Clase Jugador inicializada.
+- Clase Entrada inicializada.
+- Base de datos inicializada en intellij
