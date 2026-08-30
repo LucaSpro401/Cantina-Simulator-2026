@@ -2,7 +2,7 @@ package com.cantinasimulator.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import principal.Main; // Apunta a tu clase Main dentro del paquete 'principal'
+import com.cantinasimulator.Main;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
