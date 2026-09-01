@@ -5,6 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
@@ -13,41 +14,56 @@ public class MenuPantalla implements Screen {
     private final Main juego;
     private OrthographicCamera camara;
     private Viewport vista;
-
-    // Recurso gráfico de la imagen del menú
     private Texture menuImagen;
 
-    // Resolución de referencia virtual para mantener la proporción de pantalla
     private static final float ANCHO_VIRTUAL = 1280;
     private static final float ALTO_VIRTUAL = 720;
 
     public MenuPantalla(Main juego) {
         this.juego = juego;
 
-        // Configuración del sistema de vista y cámara
         camara = new OrthographicCamera();
         vista = new FitViewport(ANCHO_VIRTUAL, ALTO_VIRTUAL, camara);
         vista.apply();
         camara.position.set(ANCHO_VIRTUAL / 2f, ALTO_VIRTUAL / 2f, 0);
 
-        // Carga la textura desde la carpeta assets (assets/MENUS/MENU.jpeg)
-        menuImagen = new Texture(Gdx.files.internal("MENUS/MENU.jpeg"));
+        menuImagen = new Texture(Gdx.files.internal("MENUS/MENU.jpg"));
     }
 
     @Override
     public void render(float delta) {
-        // Limpiar el buffer de pantalla con fondo negro
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        // Actualizar la cámara y sincronizar el batch del juego
         camara.update();
         juego.batch.setProjectionMatrix(camara.combined);
 
-        // Dibujar el menú
         juego.batch.begin();
         juego.batch.draw(menuImagen, 0, 0, ANCHO_VIRTUAL, ALTO_VIRTUAL);
         juego.batch.end();
+
+        if (Gdx.input.justTouched()) {
+            int screenX = Gdx.input.getX();
+            int screenY = Gdx.input.getY();
+
+            // BOTÓN JUGAR -> Pasa a DiaPantalla
+            if (screenX >= 558 && screenX <= 777 && screenY >= 322 && screenY <= 362) {
+                System.out.println("APRETASTE JUGAR");
+                juego.setScreen(new DiaPantalla(juego));
+            }
+
+            // BOTÓN AJUSTES -> Pasa a AjustesPantalla
+            if (screenX >= 560 && screenX <= 776 && screenY >= 386 && screenY <= 424) {
+                System.out.println("APRETASTE AJUSTES");
+                juego.setScreen(new AjustesPantalla(juego));
+            }
+
+            // BOTÓN SALIR -> Cierra la aplicación
+            if (screenX >= 557 && screenX <= 779 && screenY >= 444 && screenY <= 486) {
+                System.out.println("APRETASTE SALIR");
+                Gdx.app.exit();
+            }
+        }
     }
 
     @Override
@@ -58,21 +74,15 @@ public class MenuPantalla implements Screen {
 
     @Override
     public void show() {}
-
     @Override
     public void pause() {}
-
     @Override
     public void resume() {}
-
     @Override
     public void hide() {}
 
     @Override
     public void dispose() {
-        // Se destruye la textura para liberar espacio en la GPU cuando la pantalla ya no exista
-        if (menuImagen != null) {
-            menuImagen.dispose();
-        }
+        if (menuImagen != null) menuImagen.dispose();
     }
 }
