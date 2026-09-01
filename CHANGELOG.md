@@ -16,3 +16,11 @@
 - Clase Jugador inicializada.
 - Clase Entrada inicializada.
 - Base de datos inicializada en intellij
+
+## [0.1.2] - 2026-08-31
+### Agregado
+- Creacion del menu
+- Apartado Jugar
+- Apartado Ajustes
+- Opciones de Sonido
+- Visualizacion en pantalla completa
