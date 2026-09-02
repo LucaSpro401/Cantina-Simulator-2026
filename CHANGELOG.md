@@ -30,4 +30,11 @@
 - Creacion del primer cliente
 - Movimiento del personaje
 - Interaccion minima
+
+- ## [0.1.4] - 2026-09-2
+### Agregado
+- Creación de la cocina
+- Cafetera
+- Maquina panchos
+- transición de cocina a mostrador
   
