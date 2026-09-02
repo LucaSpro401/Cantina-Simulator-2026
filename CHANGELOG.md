@@ -24,3 +24,10 @@
 - Apartado Ajustes
 - Opciones de Sonido
 - Visualizacion en pantalla completa
+
+- ## [0.1.3] - 2026-09-1
+### Agregado
+- Creacion del primer cliente
+- Movimiento del personaje
+- Interaccion minima
+  
