@@ -46,19 +46,16 @@ public class MenuPantalla implements Screen {
             int screenX = Gdx.input.getX();
             int screenY = Gdx.input.getY();
 
-            // BOTÓN JUGAR -> Pasa a DiaPantalla
             if (screenX >= 558 && screenX <= 777 && screenY >= 322 && screenY <= 362) {
                 System.out.println("APRETASTE JUGAR");
                 juego.setScreen(new DiaPantalla(juego));
             }
 
-            // BOTÓN AJUSTES -> Pasa a AjustesPantalla
             if (screenX >= 560 && screenX <= 776 && screenY >= 386 && screenY <= 424) {
                 System.out.println("APRETASTE AJUSTES");
                 juego.setScreen(new AjustesPantalla(juego));
             }
 
-            // BOTÓN SALIR -> Cierra la aplicación
             if (screenX >= 557 && screenX <= 779 && screenY >= 444 && screenY <= 486) {
                 System.out.println("APRETASTE SALIR");
                 Gdx.app.exit();

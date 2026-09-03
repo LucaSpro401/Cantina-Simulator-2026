@@ -48,19 +48,16 @@ public class AjustesPantalla implements Screen {
             int screenX = Gdx.input.getX();
             int screenY = Gdx.input.getY();
 
-            // BOTÓN BAJAR VOLUMEN
             if (screenX >= 603 && screenX <= 646 && screenY >= 411 && screenY <= 447) {
                 if (volumen > 0) volumen -= 10;
                 System.out.println("VOLUMEN: " + volumen + "%");
             }
 
-            // BOTÓN SUBIR VOLUMEN
             if (screenX >= 707 && screenX <= 748 && screenY >= 411 && screenY <= 446) {
                 if (volumen < 100) volumen += 10;
                 System.out.println("VOLUMEN: " + volumen + "%");
             }
 
-            // BOTÓN PANTALLA COMPLETA
             if (screenX >= 602 && screenX <= 753 && screenY >= 485 && screenY <= 580) {
                 if (pantallaCompleta) {
                     Gdx.graphics.setWindowedMode(1280, 720);
@@ -73,7 +70,6 @@ public class AjustesPantalla implements Screen {
                 }
             }
 
-            // BOTÓN VOLVER
             if (screenX >= 601 && screenX <= 750 && screenY >= 606 && screenY <= 706) {
                 System.out.println("APRETASTE VOLVER");
                 juego.setScreen(new MenuPantalla(juego));

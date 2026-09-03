@@ -28,7 +28,6 @@ public class DiaPantalla implements Screen {
         vista.apply();
         camara.position.set(ANCHO_VIRTUAL / 2f, ALTO_VIRTUAL / 2f, 0);
 
-        // VERIFICÁ LA RUTA EXACTA AQUÍ (ej. "MENUS/DIA1.jpg" o "DIA1.png")
         diaImagen = new Texture(Gdx.files.internal("MENUS/DIA1.jpg"));
     }
 
@@ -46,7 +45,6 @@ public class DiaPantalla implements Screen {
             juego.batch.end();
         }
 
-        // Cuenta 2 segundos antes de pasar a JuegoPantalla
         temporizador += delta;
         if (temporizador >= 2.0f) {
             juego.setScreen(new JuegoPantalla(juego));
