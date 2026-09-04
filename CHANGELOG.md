@@ -38,3 +38,10 @@
 - Maquina panchos
 - transición de cocina a mostrador
   
+- ## [0.1.5] - 2026-09-3
+### Agregado
+- Implementación de sistema de cocina con timer
+- Implementación de bebida cola
+- agregación de más dialogo
+  
+  
